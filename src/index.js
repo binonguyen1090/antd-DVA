@@ -8,7 +8,10 @@ initialState: {
 products: [
           { name: 'dva', id: 1 },
           { name: 'antd', id: 2 },
+          { name: 'test', id: 3 },
+          { name: 'example', id: 4 },
         ],
+
       },
 });
 
@@ -18,6 +21,7 @@ products: [
 // 3. Model
 // app.model(require('./models/example').default);
 app.model(require('./models/products').default);
+app.model(require('./models/count').default);
 
 // 4. Router
 app.router(require('./router').default);

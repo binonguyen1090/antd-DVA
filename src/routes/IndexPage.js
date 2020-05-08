@@ -19,3 +19,8 @@ IndexPage.propTypes = {
 };
 
 export default connect()(IndexPage);
+
+
+// routes/Products.js -> router.js -> components/ProductList.js 
+// -> models/products.js --> require index.js 
+//-> connect routes/Products.js --> index.js
