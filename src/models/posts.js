@@ -43,12 +43,12 @@ export default {
     },
   },
   subscriptions: {
-    setup({ dispatch, history }) {
-      return history.listen(({ pathname }) => {
-        if (pathname === "/posts") {
-          dispatch({ type: "fetchPosts" });
-        }
-      });
-    },
+    // setup({ dispatch, history }) {
+    //   return history.listen(({ pathname }) => {
+    //     if (pathname === "/posts") {
+    //       dispatch({ type: "fetchPosts" });
+    //     }
+    //   });
+    // },
   },
 };

@@ -16,7 +16,6 @@ function PostDetail(props) {
 }
 
 function mapStateToProps(state, ownProps) {
-  debugger
   // const key = ownProps.params.key;
   const key = ownProps.match.params.key;
   return {
