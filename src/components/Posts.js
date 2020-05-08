@@ -8,7 +8,7 @@ function Posts(props){
         <div className={styles.normal} style={{padding: 20}}>
             This is from components/Posts
 
-            <div>Loading: {props.loading ? <Spin></Spin> : ""} </div>
+            {/* <div>Loading: {props.loading ? <Spin></Spin> : ""} </div> */}
             <div>
                 {
                     props.posts.map(post =>
