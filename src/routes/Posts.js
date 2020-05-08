@@ -1,18 +1,13 @@
 import React from 'react'
 import {connect} from 'dva'
 import styles from './Posts.css'
+import PostComponent from '../components/Posts'
 
 function Posts(props){
     return (
-        <div className={styles.normal}>
-            <h1>Posts</h1>
-            <div>
-                {
-                    props.posts.map(({key, title})=>
-                <div key={key}>- {title}</div>
-                    )
-                }
-            </div>
+        <div className={styles.normal} style={{padding: "20px"}}>
+            <h1>This is from routes/Posts</h1>
+            <PostComponent posts={props.posts}/>
         </div>
     )
 }
