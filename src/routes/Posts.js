@@ -13,19 +13,10 @@ function Posts(props){
 }
 
 function mapStatetoProps(state){
+    const { loading, posts, postsByKey} = state.posts
     return {
-        posts: [
-            {
-                title: "learn Dva",
-                key: '1',
-                category: 'dva'
-            },
-            {
-                title: "learn Antd",
-                key: '2',
-                category: 'antd'
-            }
-        ]
+        loading,
+        posts: posts.map(key=> ({ ...postsByKey[key], key}))
         
     }
 }
