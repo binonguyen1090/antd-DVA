@@ -7,7 +7,7 @@ function Posts(props){
     return (
         <div className={styles.normal} style={{padding: "20px"}}>
             <h1>This is from routes/Posts</h1>
-            <PostComponent posts={props.posts}/>
+            <PostComponent loading={props.loading} posts={props.posts}/>
         </div>
     )
 }
