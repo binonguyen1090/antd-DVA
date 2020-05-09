@@ -2,15 +2,18 @@ import React from "react";
 import { connect } from "dva";
 // import styles from "./PostDetail.css";
 // import PostDetailComponent from "../components/PostDetail";
-// import Nav from "../components/Nav";
+import Nav from "../components/Nav";
 
 function PostDetail(props) {
-  const {title} = props.post
+  const { title, category, content } = props.post;
   return (
     <div >
+      <Nav />
         Title: {title}
-      {/* <Nav />
-      <PostDetailComponent {...props} /> */}
+        <br></br>
+        Category: {category}
+        <br></br>
+        Content: {content}
     </div>
   );
 }

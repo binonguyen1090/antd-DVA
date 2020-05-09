@@ -7,6 +7,7 @@ function PostItem(props) {
     return (
         <div className={styles.normal} style={{ padding: 20 }}>
             This is from components/PostItem
+          
             <div><Link to={`/posts/${key}`}>{title}</Link></div>
             <div>Category: {category}</div>
         </div>
