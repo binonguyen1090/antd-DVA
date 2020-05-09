@@ -33,6 +33,13 @@ export default {
         posts: Object.keys(postsByKey).reverse(),
       };
     },
+    update(state, { payload: post }) {
+      const postsByKey = { ...state.postsByKey, [post.key]: post };
+      return {
+        ...state,
+        postsByKey,
+      };
+    },
   },
   effects: {
     *fetchPosts(action, { call, put }) {
@@ -40,6 +47,10 @@ export default {
       const result = yield call(fetchPosts);
       yield put({ type: "save", payload: result });
       yield put({ type: "hideLoading" });
+    },
+    *fetchPost({ payload: key }, { call, put }) {
+      const result = yield call(fetchPost, key);
+      yield put({ type: "update", payload: { ...result, key } });
     },
   },
   subscriptions: {
